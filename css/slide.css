@@ -1,0 +1,106 @@
+img {
+	border: 0;
+}
+.ck-slide ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.ck-slide {
+	position: relative;
+	width: 325px;
+    height: 240px;
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+
+}
+.ck-slide ul.ck-slide-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+}
+.ck-slide ul.ck-slide-wrapper li {
+	position: absolute;
+	margin-top:0px;
+	width: 325px;
+    height: 240px;
+    overflow: hidden;
+
+}
+.ck-slide ul.ck-slide-wrapper li a{
+	/*a标签是行内元素，宽高对a标签不起作用，
+	这里必须添加line-height:0px;display:black，否则垂直滚动<li>之间会出现间隔*/
+	line-height:0px;
+	display:block;
+}
+.ck-slide ul.ck-slide-wrapper li a img{
+	width: 325px;
+	height: 240px;
+}
+.ck-slide ul.ck-slide-wrapper li a p{
+	font-size: 14px;
+	width:325px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+    bottom: 0;
+    z-index: 99;
+    overflow: hidden;
+
+}
+.ck-slide .ck-prev, .ck-slide .ck-next {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 30px;
+	height: 70px;
+	opacity: .15;
+	background: red;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	transition: opacity .2s linear 0s;
+}
+.ck-slide .ck-prev {
+	left: 5px;
+	background: url(../images/left-arrows.png) #f6f7f9 50% no-repeat;
+}
+.ck-slide .ck-next {
+	right: 5px;
+	background: url(../images/right-arrows.png) #f6f7f9 50% no-repeat;
+}
+.ck-slidebox {
+	position: absolute;
+	right: 20px;
+    top:50%;
+    margin-top: 60px;
+	z-index: 30;
+}
+
+.ck-slidebox ul li {
+	float: left;
+	height: 22px;
+	margin: 4px 4px;
+}
+.ck-slidebox ul li em {
+	display: block;
+	width: 22px;
+	height: 22px;
+	text-align: center;
+	line-height: 22px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+}
+.ck-slidebox ul li.current em {
+	background-color: rgba(150, 12, 10, 0.6);
+}
+.ck-slidebox ul li em:hover {
+	background-color: rgba(150, 12, 10, 0.6);
+}
